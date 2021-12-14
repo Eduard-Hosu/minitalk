@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/13 17:05:17 by ehosu             #+#    #+#              #
-#    Updated: 2021/12/14 14:56:28 by ehosu            ###   ########.fr        #
+#    Updated: 2021/12/14 17:16:58 by ehosu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,9 @@ CC = gcc
 CFLAGS = -g -Wall -Wextra -Werror
 
 all:	$(CLIENT_NAME) $(SERVER_NAME)
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 $(SERVER_NAME):	$(OBJS_SERVER)
 	cd print_f && ${MAKE}

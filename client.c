@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:07:02 by ehosu             #+#    #+#             */
-/*   Updated: 2021/12/14 11:49:23 by ehosu            ###   ########.fr       */
+/*   Updated: 2021/12/14 17:13:45 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void	my_pause(void)
 {
 	while (g_confirm)
-	{
-		usleep(10);
-	}
+		;
+	usleep(100);
 	g_confirm = 1;
 }
 
