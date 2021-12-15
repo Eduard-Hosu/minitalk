@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:07:02 by ehosu             #+#    #+#             */
-/*   Updated: 2021/12/14 17:13:45 by ehosu            ###   ########.fr       */
+/*   Updated: 2021/12/15 12:06:48 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	my_pause(void)
 {
 	while (g_confirm)
 		;
-	usleep(100);
+	usleep(300);
 	g_confirm = 1;
 }
 
@@ -25,7 +25,7 @@ void	handle_response(int sing)
 	if (sing == SIGUSR1)
 		g_confirm = 0;
 	else
-		ft_printf("Message recived!\n");
+		ft_printf("Message received!\n");
 }
 
 void	send_massage(char *str, int server_id)
